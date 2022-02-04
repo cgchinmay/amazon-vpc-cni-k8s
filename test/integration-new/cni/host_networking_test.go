@@ -61,7 +61,7 @@ var _ = Describe("test host networking", func() {
 				AWS_VPC_K8S_CNI_VETHPREFIX: DEFAULT_VETH_PREFIX,
 			})
 		})
-		It("should have correct host networking setup when running and cleaned up once terminated", func() {
+		FIt("should have correct host networking setup when running and cleaned up once terminated", func() {
 			// Launch enough pods so some pods end up using primary ENI IP and some using secondary
 			// ENI IP
 			deployment := manifest.NewBusyBoxDeploymentBuilder().
